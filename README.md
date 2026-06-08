@@ -153,9 +153,3 @@ positions_agents  -- Historique de position GPS des agents
 Usage réservé — tous droits réservés.
 
 ---
-
-<div align="center">
-
-Développé avec soin · Sénégal 2026
-
-</div>
