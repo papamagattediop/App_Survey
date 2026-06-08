@@ -79,14 +79,8 @@ ansd-enquete/
 
 ### Application mobile (agents)
 
-- **Authentification sécurisée** par identifiant agent (AGT-001, AGT-002...)
-- **Questionnaire en 6 sections** structurées et validées :
-  - **A** · Identification du ménage (région, département, village, GPS)
-  - **B** · Caractéristiques socio-économiques + vulnérabilité
-  - **C** · Accès à l'énergie avant raccordement
-  - **D** · Conditions de raccordement électrique (2020-2026)
-  - **E** · Impacts du raccordement (revenus, AGR, usage)
-  - **F** · Données communautaires *(réservée au chef de village)*
+- **Authentification sécurisée** par identifiant agent
+- **Questionnaire en 6 sections** structurées et validées 
 - **Liaison automatique région/département** : sélectionner Fatick sélectionne Foundiougne, et vice versa
 - **Mode hors-ligne** : les questionnaires sont sauvegardés localement et synchronisés dès que le réseau est disponible
 - **Tracking GPS en arrière-plan** pour le suivi de position des agents
@@ -101,13 +95,6 @@ ansd-enquete/
 - **Protection des routes** par middleware Next.js
 
 ---
-
-## Zones géographiques couvertes
-
-| Région | Département | Type de zone |
-|--------|-------------|--------------|
-| Fatick | Foundiougne | Rural / Péri-urbain |
-| Kaolack | Nioro | Rural / Péri-urbain |
 
 ---
 
@@ -163,19 +150,7 @@ positions_agents  -- Historique de position GPS des agents
 - Compte [Supabase](https://supabase.com) (projet configuré)
 - Compte [Expo](https://expo.dev) + EAS CLI pour le mobile
 
-### Variables d'environnement
 
-**Mobile** (`mobile/.env`):
-```env
-EXPO_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
-EXPO_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...
-```
-
-**Dashboard** (`dashboard/.env.local`):
-```env
-NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGc...
-```
 
 ### Lancer en développement
 
@@ -213,17 +188,7 @@ cd dashboard
 # Ajouter les variables d'environnement dans le dashboard Vercel
 ```
 
----
 
-## Comptes de démonstration
-
-| Rôle | Identifiant | Usage |
-|------|-------------|-------|
-| Superviseur | `SUPV-001` | Accès dashboard web |
-| Agent 1 | `AGT-001` | Application mobile |
-| Agent 2 | `AGT-002` | Application mobile |
-
-> Les mots de passe sont gérés dans Supabase Auth et communiqués séparément.
 
 ---
 
