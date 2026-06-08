@@ -1,9 +1,9 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 
-export default function LoginPage() {
+function LoginForm() {
   const searchParams = useSearchParams();
   const [loading, setLoading] = useState(false);
 
@@ -94,5 +94,17 @@ export default function LoginPage() {
         </p>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-navy flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin" />
+      </div>
+    }>
+      <LoginForm />
+    </Suspense>
   );
 }
