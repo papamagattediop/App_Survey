@@ -265,7 +265,6 @@ Section F  ·  Données communautaires  [chef de village uniquement]
 
 ## Licence
 
-Projet développé dans le cadre d'une enquête académique et institutionnelle.  
 Usage réservé — tous droits réservés.
 
 ---
