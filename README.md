@@ -94,9 +94,7 @@ ansd-enquete/
 - **Anonymisation** des agents (Agent 1, Agent 2 / Admin)
 - **Protection des routes** par middleware Next.js
 
----
 
----
 
 ## Stack technique
 
@@ -149,84 +147,6 @@ positions_agents  -- Historique de position GPS des agents
 - npm ou yarn
 - Compte [Supabase](https://supabase.com) (projet configuré)
 - Compte [Expo](https://expo.dev) + EAS CLI pour le mobile
-
-
-
-### Lancer en développement
-
-```bash
-# Dashboard
-cd dashboard
-npm install
-npm run dev
-# Accessible sur http://localhost:3000
-
-# Mobile
-cd mobile
-npm install
-npx expo start
-# Scanner le QR code avec Expo Go
-```
-
-### Build mobile (production)
-
-```bash
-cd mobile
-
-# Build APK Android
-npx eas build --platform android --profile preview
-
-# Mise à jour OTA (sans nouveau build)
-npx eas update --branch production --message "Description de la mise à jour"
-```
-
-### Déploiement dashboard (Vercel)
-
-```bash
-cd dashboard
-# Via l'interface Vercel : importer le repo GitHub, sélectionner /dashboard comme Root Directory
-# Ajouter les variables d'environnement dans le dashboard Vercel
-```
-
-
-
----
-
-## Questionnaire : structure des sections
-
-```
-Section A  ·  Identification du ménage
-           └─ Région, département, village, milieu, GPS, nom chef, chef de village ?
-
-Section B  ·  Caractéristiques socio-économiques
-           └─ Taille ménage, niveau instruction, occupation, dépenses, sécurité alimentaire
-
-Section C  ·  Accès à l'énergie (avant raccordement)
-           └─ Sources d'énergie utilisées, coûts, équipements
-
-Section D  ·  Raccordement électrique
-           └─ Type d'abonnement, année de raccordement (2020-2026), coût, satisfaction
-
-Section E  ·  Impacts du raccordement
-           └─ Effets sur revenus, activités génératrices (AGR), santé, éducation, sécurité
-
-Section F  ·  Données communautaires  [chef de village uniquement]
-           └─ Infrastructures collectives, impact sur la communauté
-```
-
----
-
-## Captures d'écran
-
-> *Captures à ajouter après déploiement final.*
-
-| App mobile | Dashboard superviseur |
-|:----------:|:---------------------:|
-| *Login agent* | *Tableau de bord* |
-| *Questionnaire* | *Liste questionnaires* |
-| *Synchronisation* | *Export données* |
-
----
 
 ## Licence
 
